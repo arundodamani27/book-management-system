@@ -1,4 +1,4 @@
-# Book Store Manager
+# Book Management System
 
 A simple book management application using Express.js and Fetch API.
 
