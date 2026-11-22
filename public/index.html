@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Store Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Book Store Manager</h1>
+    <p class="subtitle">Manage books (ID, Author, Price) via Express &amp; Fetch API</p>
+    <div id="message" class="message hidden"></div>
+
+    <section class="card">
+      <h2>Add New Book</h2>
+      <form id="addBookForm">
+        <label for="author">Author</label>
+        <input id="author" name="author" placeholder="e.g. Jane Austen" required>
+        <label for="price">Price</label>
+        <input id="price" name="price" type="number" min="0" step="0.01" placeholder="e.g. 15.99" required>
+        <button type="submit">Add Book</button>
+      </form>
+    </section>
+
+
+    <section class="card">
+      <h2>Find Book by ID</h2>
+      <div class="find-row">
+        <input id="bookId" type="number" min="1" placeholder="Enter Book ID">
+        <button id="getBookBtn">Get Book</button>
+        <button id="showAllBtn" class="secondary">Show All</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Books List</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Book ID</th><th>Author</th><th>Price</th><th>Actions</th></tr></thead>
+          <tbody id="booksTableBody"><tr><td colspan="4">Loading books...</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
